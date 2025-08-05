@@ -1,8 +1,7 @@
-<p align="center">
-  <span size="50px"><b>XianLai-PWUtil</b><span>
-</p>
-<p align="center">基于命令行的密码加解密工具</p>
-    
----
+<h1 align="center">
+  <b>XianLai-PWUtil</b>
+</h1>
+
+基于命令行的密码加解密工具
 
 中文 | [English](README_EN.md)
