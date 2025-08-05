@@ -1,5 +1,5 @@
 <p align="center">
-  <b>XianLai-PWUtil</b>
+  <span style="font-size: 20px"><b>XianLai-PWUtil</b><span>
 </p>
 <p align="center">基于命令行的密码加解密工具</p>
     
