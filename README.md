@@ -1,6 +1,6 @@
-<h1 align="center">
+<p align="center">
   <b>XianLai-PWUtil</b>
-</h1>
+</p>
 <p align="center">基于命令行的密码加解密工具</p>
     
 ---
