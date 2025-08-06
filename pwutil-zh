@@ -1,3 +1,4 @@
+#!/bin/bash
 # 脚本中执行的命令不会记录到history中，不会造成敏感信息泄露
 echo
 printf "欢迎使用 \033[4mXianLai - PWUtil\033[0m\n"
@@ -51,5 +52,4 @@ while true; do
         printf "\033[31m输入错误\033[0m\n"
     fi
 done
-echo
 reset

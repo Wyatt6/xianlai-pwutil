@@ -1,3 +1,4 @@
+#!/bin/bash
 # commands in script will not be recorded into history
 echo
 printf "Welcome to use \033[4mXianLai - PWUtil\033[0m\n"
@@ -52,5 +53,4 @@ while true; do
         printf "\033[31mWrong option\033[0m\n"
     fi
 done
-echo
 reset
