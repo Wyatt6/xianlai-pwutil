@@ -24,11 +24,13 @@ Another way to reduce the difficulty of memory is to write down these passwords 
 
 - `pwutil-zh`: Simplified chinese script, supports macOS and Linux
 - `pwutil-en`: English script, supports macOS and Linux
+- `pwutil-zh.bat`: Simplified chinese script, supports Windows
+- `pwutil-en.bat`: English script, supports Windows
 
-### Use in macOS / Linux Operating System
+### Use in macOS / Linux Operating System (Recommended)
 
-1. Make sure that Java 17 / JDK 17 or newer running environment has been deployed.
-2. Download program `pwutil.jar` and English script `pwutil-en`.
+1. Make sure that Java / JDK running environment has been deployed (recommand 17 or newer).
+2. Download program `pwutil.jar` and English script `pwutil-en` into the same directory.
 3. Enter the directory of script, and execute the following command to grant the script executable permission:
 
 ```shell
@@ -40,4 +42,10 @@ chmod +x ./pwutil-en
 ```shell
 ./pwutil-en
 ```
+
+### Use in Windows Operating System
+
+1. Make sure that Java / JDK running environment has been deployed (recommand 17 or newer).
+2. Download program `pwutil.jar` and English script `pwutil-en.bat` who supports Windows into the same directory.
+3. Double click the script to execute, select the option according to the prompts, and then enter data to run the program.
 

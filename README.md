@@ -24,11 +24,13 @@
 
 - `pwutil-zh`：中文脚本，支持 macOS 和 Linux 
 - `pwutil-en`：英文脚本，支持 macOS 和 Linux 
+- `pwutil-zh.bat`：中文脚本，支持 Windows
+- `pwutil-en.bat`：英文脚本，支持 Windows
 
-### 在 macOS / Linux 系统中使用
+### 在 macOS / Linux 系统中使用（推荐）
 
-1. 前提是已经安装和配置好 Java 17 / JDK 17 及以上版本的运行环境。
-2. 下载程序`pwutil.jar`和中文脚本`pwutil-zh`。
+1. 前提是已经安装和配置好 Java / JDK 运行环境（建议 17 及以上）。
+2. 下载程序`pwutil.jar`和中文脚本`pwutil-zh`在同一个目录下。
 3. 进入脚本所在目录，执行以下命令授予脚本可执行权限：
 
 ```shell
@@ -40,4 +42,10 @@ chmod +x ./pwutil-zh
 ```shell
 ./pwutil-zh
 ```
+
+### 在 Windows 系统中使用
+
+1. 前提是已经安装和配置好 Java / JDK 运行环境（建议  Java 17 / JDK 17 及以上）。
+2. 下载程序`pwutil.jar`和支持 Windows 系统的中文脚本`pwutil-zh.bat`在同一个目录下。
+3. 双击脚本，根据提示信息选择操作类型、输入加密解密数据即可执行程序。
 
