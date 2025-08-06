@@ -1,0 +1,55 @@
+#!/bin/bash
+# 脚本中执行的命令不会记录到history中，不会造成敏感信息泄露
+echo
+printf "欢迎使用 \033[4mXianLai - PWUtil\033[0m\n"
+echo
+printf "这是一个基于命令行的密码加解密工具\n"
+while true; do
+    echo
+    printf "=======================================================\n"
+    echo
+    read -p "请选择操作 (1-加密, 2-解密, Q-退出): " opt
+    if [ -z "$opt" ]; then
+        continue
+    elif [ "$opt" = "q" ] || [ "$opt" = "Q" ]; then
+        break
+    elif [ $opt -eq 1 ]; then
+        read -p "请输入明文（0-取消）: " str
+        if [ "$str" = "0" ]; then
+            continue
+        fi
+        read -p "请输入密钥（0-取消）: " key_str
+        if [ "$key_str" = "0" ]; then
+            continue
+        fi
+        echo
+        printf "\033[34m[RUN] 执行加密程序: \033[0m\n"
+        echo
+        # 红色提示
+        printf "\033[31m【注意】\033[0m\n"
+        printf "\033[31m输入特殊字符可能出现问题！请认真核对输入的明文与程序读取的明文是否相同！\033[0m\n"
+        printf "\033[31m有些情况程序暂时无法处理，如中间的‘\$’会截断输入的明文，应尽量避免使用特殊字符，或使用转义字符‘\’处理。\033[0m\n"
+        echo
+        java -jar pwutil.jar --zh -e $str $key_str
+        echo
+        printf "\033[32m[STOP] 加密程序执行完毕\033[0m\n"
+    elif [ $opt -eq 2 ]; then
+        read -p "请输入密文（0-取消）: " crypt_str
+        if [ "$crypt_str" = "0" ]; then
+            continue
+        fi
+        read -p "请输入密钥（0-取消）: " key_str
+        if [ "$key_str" = "0" ]; then
+            continue
+        fi
+        echo
+        printf "\033[34m[RUN] 执行解密程序: \033[0m\n"
+        echo
+        java -jar pwutil.jar --zh -d $crypt_str $key_str
+        echo
+        printf "\033[32m[STOP] 解密程序执行完毕\033[0m\n"
+    else
+        printf "\033[31m输入错误\033[0m\n"
+    fi
+done
+reset

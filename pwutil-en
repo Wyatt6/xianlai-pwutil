@@ -1,0 +1,56 @@
+#!/bin/bash
+# commands in script will not be recorded into history
+echo
+printf "Welcome to use \033[4mXianLai - PWUtil\033[0m\n"
+echo
+printf "A Password Encryption and Decryption Tool Based on the Command Line\n"
+while true; do
+    echo
+    printf "=======================================================\n"
+    echo
+    read -p "Please select your option (1-Encryption, 2-Decryption, Q-Quit): " opt
+    if [ -z "$opt" ]; then
+        continue
+    elif [ "$opt" = "q" ] || [ "$opt" = "Q" ]; then
+        break
+    elif [ $opt -eq 1 ]; then
+        read -p "Please enter plaintext (0-Cancel): " str
+        if [ "$str" = "0" ]; then
+            continue
+        fi
+        read -p "Please enter key string (0-Cancel): " key_str
+        if [ "$key_str" = "0" ]; then
+            continue
+        fi
+        echo
+        printf "\033[34m[RUN] Run the encryption program: \033[0m\n"
+        echo
+        # red text hints
+        printf "\033[31mCaution!!!\033[0m\n"
+        printf "\033[31mThere may be a problem with entering special characters!\033[0m\n"
+        printf "\033[31mPlease carefully check whether the input plaintext is the same as that read by the program!\033[0m\n"
+        printf "\033[31mYou should try to use special characters with the escape character '\' or avoid using special characters.\033[0m\n"
+        echo
+        java -jar pwutil.jar --en -e $str $key_str
+        echo
+        printf "\033[32m[STOP] The encryption program is finished\033[0m\n"
+    elif [ $opt -eq 2 ]; then
+        read -p "Please enter ciphertext (0-Cancel): " crypt_str
+        if [ "$crypt_str" = "0" ]; then
+            continue
+        fi
+        read -p "Please enter key string (0-Cancel): " key_str
+        if [ "$key_str" = "0" ]; then
+            continue
+        fi
+        echo
+        printf "\033[34m[RUN] Run the dncryption program: \033[0m\n"
+        echo
+        java -jar pwutil.jar --en -d $crypt_str $key_str
+        echo
+        printf "\033[32m[STOP] The dncryption program is finished\033[0m\n"
+    else
+        printf "\033[31mWrong option\033[0m\n"
+    fi
+done
+reset
