@@ -6,6 +6,8 @@ A Password Encryption and Decryption Tool Based on the Command Line
 
 [中文](README.md) | English
 
+Appreciate for your ⭐️Star⭐️
+
 ---
 
 ## Introduction
